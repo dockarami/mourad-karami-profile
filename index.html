@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mourad Karami - Medical Student & Health Educator</title>
+<meta name="description" content="Portfolio of Mourad Karami, Moroccan medical student and health educator known as @doc.karami. Featured in Kech24, Marrakech7, and FluxPress.">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mourad Karami",
+  "alternateName": ["Dr. Karami", "doc.karami"],
+  "url": "https://sites.google.com/view/dockarami",
+  "image": "https://i.imgur.com/cOFTbkR.jpeg",
+  "jobTitle": "Medical Student & Health Educator",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Grigore T. Popa University of Medicine and Pharmacy"
+  },
+  "knowsAbout": ["Medicine", "Public Health", "Anemia", "Nutrition", "Preventive Health"],
+  "sameAs": [
+    "https://www.instagram.com/doc.karami",
+    "https://www.youtube.com/@doc.karami",
+    "https://www.tiktok.com/@doc.karami", 
+    "https://www.linkedin.com/in/dockarami" 
+  ],
+  "subjectOf": [
+    {
+      "@type": "CreativeWork",
+      "name": "Kech24 Article",
+      "url": "https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Marrakech7 Article",
+      "url": "https://marrakech7.com/457-3/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "FluxPress Article",
+      "url": "https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/"
+    }
+  ]
+}
+</script>
+
+<style>
+    /* --- CSS Styles --- */
+    :root {
+        --bg-color: #f4f7fa;
+        --card-bg: #ffffff;
+        --text-dark: #112e51;
+        --text-grey: #555;
+        --accent-blue: #1b5eab;
+        --accent-pink: #d62976;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+
+    /* Header */
+    h1 { font-size: 2.5rem; font-weight: 700; color: var(--text-dark); margin-bottom: 5px; }
+    .subtitle { font-size: 1.1rem; font-weight: 500; color: var(--text-dark); margin-bottom: 15px; }
+    .bio-text { font-size: 0.95rem; color: var(--text-grey); max-width: 600px; margin: 0 auto 25px auto; }
+
+    /* Buttons */
+    .header-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 25px; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.9rem; transition: transform 0.2s; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .btn-contact { background-color: var(--accent-blue); }
+    .btn i { margin-right: 8px; }
+
+    /* Cards */
+    .card { background: var(--card-bg); border: 1px solid #eee; border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .section-header { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--text-dark); font-weight: 700; font-size: 1.1rem; }
+    .section-header::before, .section-header::after { content: ""; flex: 1; border-bottom: 1px solid #ddd; margin: 0 15px; }
+
+    /* Stats & Logos */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; align-items: center; text-align: center; }
+    .stat-item h3 { font-size: 1.2rem; font-weight: 800; color: var(--text-dark); }
+    .stat-item p, .stat-item span { font-size: 0.8rem; color: #666; }
+    
+    .clickable-stat { text-decoration: none; color: inherit; transition: opacity 0.2s; display: block; }
+    .clickable-stat:hover { opacity: 0.7; }
+    
+    /* Press Links Styling */
+    .press-link { color: green; text-decoration: none; border-bottom: 1px dotted green; font-weight: 600; }
+    .press-link:hover { background-color: #e8f5e9; }
+
+    .logo-placeholder { font-weight: bold; color: #444; font-style: italic; line-height: 1.8; }
+
+    /* Bio & Topics */
+    .bio-description { font-size: 0.95rem; color: #444; line-height: 1.7; }
+    .topics-list { list-style: none; text-align: left; display: inline-block; padding: 0; }
+    .topics-list li { margin-bottom: 10px; font-size: 0.95rem; color: var(--text-dark); font-weight: 500; }
+    .topics-list li::before { content: "•"; color: #3b82f6; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
+
+    /* Videos */
+    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    @media (max-width: 600px) { .video-grid { grid-template-columns: 1fr; } }
+    .video-card { position: relative; background-color: #ddd; border-radius: 8px; overflow: hidden; aspect-ratio: 9/16; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+    
+    /* VIDEO IMAGES */
+    .vid-1 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://placehold.co/400x600/1a4a4a/FFF?text=Anemia+Video'); }
+    .vid-2 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://placehold.co/400x600/4a2b1a/FFF?text=Smoking+Video'); }
+    .vid-3 { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://placehold.co/400x600/1a2b4a/FFF?text=Sleep+Video'); }
+
+    .video-title { position: absolute; top: 10px; left: 10px; color: white; font-weight: bold; font-size: 0.85rem; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+    .play-icon { font-size: 2rem; color: rgba(255,255,255,0.9); }
+    .view-count { position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.6); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+
+    /* Footer */
+    .collab-btn { background-color: var(--accent-blue); color: white; padding: 12px 30px; text-decoration: none; display: inline-block; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 20px; width: 100%; max-width: 300px; transition: background 0.2s; }
+    .collab-btn:hover { background-color: #144a8b; }
+    footer { margin-top: 40px; font-size: 0.8rem; color: #777; border-top: 1px solid #ddd; padding-top: 20px; padding-bottom: 20px; }
+    .social-links { margin-top: 15px; display: flex; justify-content: center; gap: 15px; }
+    .social-links a { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: #eee; transition: all 0.2s; }
+    .social-links i { font-size: 1.2rem; }
+    .social-links a:hover { transform: translateY(-3px); }
+    /* Social Colors */
+    .social-links .fa-instagram { color: #d62976; }
+    .social-links .fa-youtube { color: #ff0000; }
+    .social-links .fa-tiktok { color: #000000; }
+    .social-links .fa-linkedin { color: #0077b5; }
+    .social-links a.ig:hover { color: white; background: #d62976; }
+    .social-links a.yt:hover { color: white; background: #ff0000; }
+    .social-links a.tk:hover { color: white; background: #000000; }
+    .social-links a.li:hover { color: white; background: #0077b5; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Mourad Karami</h1>
+        <div class="subtitle">Medical Student & Health Educator | @doc.karami</div>
+        <p class="bio-text">Moroccan medical student creating evidence-based health education in Moroccan Arabic (Darija).</p>
+        
+        <div class="header-buttons">
+            <a href="https://www.instagram.com/doc.karami" target="_blank" class="btn btn-insta">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="mailto:karami.mourad.doc@gmail.com" class="btn btn-contact">
+                <i class="fas fa-envelope"></i> Contact / Collaborations
+            </a>
+        </div>
+    </header>
+
+    <div class="card">
+        <div class="section-header">Trusted by thousands online</div>
+        <div class="stats-grid">
+            <a href="https://www.instagram.com/doc.karami" target="_blank" class="clickable-stat">
+                <div class="stat-item">
+                    <h3>100,000+</h3>
+                    <p>followers on Instagram</p>
+                </div>
+            </a>
+            
+            <a href="https://www.youtube.com/@doc.karami" target="_blank" class="clickable-stat">
+                <div class="stat-item">
+                    <i class="fab fa-youtube" style="font-size: 2rem; color: #112e51;"></i>
+                    <p><strong>Millions of views</strong><br>on health education</p>
+                </div>
+            </a>
+
+            <div class="stat-item">
+                <div class="logo-placeholder">L'ORÉAL<br><span style="font-size:0.6em; font-weight:normal;">PARIS</span></div>
+                <p>Partnered with</p>
+            </div>
+            
+            <div class="stat-item">
+                <div class="logo-placeholder" style="color: green;">
+                    <a href="https://marrakech7.com/457-3/" target="_blank" class="press-link">Marrakech7</a>, 
+                    <a href="https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html" target="_blank" class="press-link">Kech24</a>
+                    <br>& <a href="https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/" target="_blank" class="press-link">FluxPress</a>
+                </div>
+                <p>Featured in</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-header">Who is Mourad Karami?</div>
+        <p class="bio-description">
+            Mourad <strong>Karami</strong> is a Moroccan medical student at Grigore T. Popa University of Medicine and Pharmacy in Iasi, Romania. Known online as <u>@doc.karami</u>, he simplifies medical topics for Arabic-speaking audiences.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="section-header">Health topics I focus on</div>
+        <ul class="topics-list">
+            <li><strong>Anemia and fatigue</strong></li>
+            <li><strong>Sleep and lifestyle</strong> habits</li>
+            <li><strong>Smoking and addiction</strong></li>
+            <li><strong>Nutrition</strong> and supplements</li>
+            <li><strong>Preventive</strong> health</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="section-header">Popular Videos</div>
+        <div class="video-grid">
+            <div class="video-card vid-1">
+                <div class="video-title">Anemia & Fatigue</div>
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+                <div class="view-count">582K views</div>
+            </div>
+            <div class="video-card vid-2">
+                <div class="video-title">The Dangers of Smoking</div>
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+                <div class="view-count">1.2M views</div>
+            </div>
+            <div class="video-card vid-3">
+                <div class="video-title">7 Tips for Better Sleep</div>
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+                <div class="view-count">864K views</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="background: transparent; border: none; box-shadow: none;">
+        <div class="section-header">Collaborations & media</div>
+        <p class="bio-description">For brand collaborations, health campaigns, or media inquiries, feel free to <strong>get in touch</strong>.</p>
+        <a href="mailto:karami.mourad.doc@gmail.com" class="collab-btn">Contact Me</a>
+    </div>
+
+    <footer>
+        <p><strong>Mourad Karami</strong> | Medical student & health educator | Morocco · Romania</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/doc.karami" target="_blank" class="ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@doc.karami" target="_blank" class="yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@doc.karami" target="_blank" class="tk" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/dockarami/" target="_blank" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
