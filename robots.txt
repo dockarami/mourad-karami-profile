@@ -1,0 +1,10 @@
+# ==========================================
+# ROBOTS.TXT - MOURAD KARAMI
+# Access: Public
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.mouradkarami.com/sitemap.xml
