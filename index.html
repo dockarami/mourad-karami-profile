@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mourad Karami | Medical Student & Public Figure</title>
+    <title>Mourad Karami | Medical Student & Researcher</title>
 
-    <meta name="description" content="Official Hub of Mourad Karami (doc.karami). Medical Student, Health Educator, and Public Figure transforming health awareness in Morocco & Romania.">
+    <meta name="description" content="Official Hub of Mourad Karami (doc.karami). Medical Student, Researcher, and Health Educator transforming public health in Morocco & Romania.">
     <meta name="keywords" content="Mourad Karami, Medical Student, Health Educator, Public Figure, Morocco, Romania, UMF Iasi, Anemia, Preventive Medicine">
     <meta name="author" content="Mourad Karami">
     <link rel="canonical" href="https://www.mouradkarami.com/">
@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://www.mouradkarami.com/">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -31,12 +31,22 @@
                         display: ['"SF Pro Display"', 'sans-serif'],
                     },
                     colors: {
+                        glass: {
+                            100: 'rgba(255, 255, 255, 0.4)',
+                            200: 'rgba(255, 255, 255, 0.65)',
+                            300: 'rgba(255, 255, 255, 0.85)',
+                            border: 'rgba(255, 255, 255, 0.5)',
+                        },
                         brand: {
                             blue: '#007AFF',
                             dark: '#1D1D1F',
                             text: '#86868B',
                             bg: '#F5F5F7'
                         }
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                        'xl': '20px',
                     },
                     animation: {
                         'float': 'float 8s ease-in-out infinite',
@@ -241,7 +251,10 @@
                         <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>
                     </div>
                     <div class="leading-tight">
-                        <h1 class="text-sm font-bold text-gray-900">Mourad Karami</h1>
+                        <h1 class="text-sm font-bold text-gray-900 flex items-center gap-1.5">
+                            Mourad Karami 
+                            <i class="fas fa-stethoscope text-brand-blue text-xs opacity-90"></i>
+                        </h1>
                         <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Public Figure</p>
                     </div>
                 </div>
