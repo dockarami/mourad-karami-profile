@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://www.mouradkarami.com/</loc>
@@ -11,10 +10,9 @@
 
     <image:image>
       <image:loc>https://i.imgur.com/cOFTbkR.jpeg</image:loc>
-      <image:title>Mourad Karami - Medical Student & Health Educator</image:title>
+      <image:title>Mourad Karami</image:title>
       <image:caption>Official profile of Mourad Karami (doc.karami).</image:caption>
     </image:image>
   </url>
 
 </urlset>
-
