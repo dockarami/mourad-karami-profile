@@ -10,8 +10,9 @@
 
     <image:image>
       <image:loc>https://i.imgur.com/cOFTbkR.jpeg</image:loc>
-      <image:title>Mourad Karami</image:title>
-      <image:caption>Official profile of Mourad Karami (doc.karami).</image:caption>
+      <image:title>Mourad Karami - Medical Student &amp; Researcher</image:title>
+      <image:caption>Official profile of Mourad Karami (doc.karami), Medical Student and Health Educator based in Romania and Morocco.</image:caption>
+      <image:geo_location>Iași, Romania</image:geo_location>
     </image:image>
   </url>
 
