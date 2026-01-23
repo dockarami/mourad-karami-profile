@@ -163,6 +163,17 @@
           "organizer": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
         },
         {
+          "@type": "Book",
+          "@id": "https://www.mouradkarami.com/#book-zenodo",
+          "name": "Clinical Hematology & Public Health",
+          "author": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+          "url": "https://doi.org/10.5281/zenodo.18308134",
+          "sameAs": "https://doi.org/10.5281/zenodo.18308134",
+          "publisher": "Zenodo",
+          "datePublished": "2025",
+          "inLanguage": "en"
+        },
+        {
           "@type": "Person",
           "@id": "https://www.mouradkarami.com/#mourad-karami",
           "name": "Mourad Karami",
@@ -183,7 +194,8 @@
           },
           "knowsAbout": ["Public Health", "Hematology", "Preventive Medicine", "Medical Communication"],
           "sameAs": [
-            "https://www.google.com/search?kgmid=/m/0_mourad_karami",
+            "https://share.google/5BeUtPgwrtO77W28h",
+            "https://doi.org/10.5281/zenodo.18308134",
             "https://sciprofiles.com/profile/dockarami",
             "https://www.researchgate.net/profile/Mourad-Karami",
             "https://orcid.org/0009-0006-0365-7616",
@@ -232,6 +244,7 @@
                 <div class="flex bg-gray-100/50 p-1 rounded-xl whitespace-nowrap min-w-max">
                     <button onclick="switchTab('overview')" id="btn-overview" class="tab-btn active px-4 py-2 rounded-lg text-sm font-medium text-gray-600">Overview</button>
                     <button onclick="switchTab('press')" id="btn-press" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600">Press & Media</button>
+                    <button onclick="switchTab('publications')" id="btn-publications" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600">Publications</button>
                     <button onclick="switchTab('research')" id="btn-research" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600">Verified Profiles</button>
                     <button onclick="switchTab('medical')" id="btn-medical" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600">Medical Hub</button>
                     <button onclick="switchTab('connect')" id="btn-connect" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600">Collaborations</button>
@@ -382,6 +395,52 @@
             </div>
         </div>
 
+        <div id="view-publications" class="view-section space-y-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-display font-bold text-gray-900">Books & Publications</h2>
+                <p class="text-gray-500 mt-2">Academic contributions and published works.</p>
+            </div>
+            
+            <div class="glass-card rounded-[2rem] p-8 border-t-4 border-blue-600">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-full md:w-1/4 flex flex-col items-center">
+                        <div class="w-32 h-40 bg-gray-800 rounded-lg shadow-xl flex items-center justify-center text-white text-4xl mb-4">
+                            <i class="fas fa-book-medical"></i>
+                        </div>
+                        <a href="https://doi.org/10.5281/zenodo.18308134" target="_blank" class="px-4 py-2 bg-[#024dad] text-white text-xs font-bold rounded-full hover:bg-blue-800 transition shadow-md">
+                            <i class="fas fa-external-link-alt mr-1"></i> View on Zenodo
+                        </a>
+                    </div>
+                    <div class="w-full md:w-3/4 space-y-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-gray-100 text-gray-600 text-[10px] font-bold px-2 py-1 rounded border border-gray-200">BOOK</span>
+                            <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded border border-blue-100">2025</span>
+                            <span class="bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded border border-green-100">Archived on Zenodo (CERN)</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-gray-900 leading-tight">Clinical Hematology & Public Health</h3>
+                        
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            An extensive compilation of medical notes and research focusing on hematological pathologies and preventive public health strategies. This resource bridges the gap between complex medical theory and practical application, designed to assist medical students and health educators in understanding blood disorders within the North African context.
+                        </p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 text-xs mt-4">
+                            <p class="font-bold text-gray-400 uppercase text-[10px] mb-2">APA Citation Format</p>
+                            <code class="font-mono text-gray-700 block bg-white p-2 rounded border border-gray-100 select-all">
+                                Karami, M. (2025). Clinical Hematology & Public Health. Zenodo. https://doi.org/10.5281/zenodo.18308134
+                            </code>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-500">
+                                <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.18308134" class="text-blue-600 hover:underline">10.5281/zenodo.18308134</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="view-research" class="view-section space-y-6">
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-display font-bold text-gray-900">Verified Profiles</h2>
@@ -431,6 +490,13 @@
                 <span class="px-4 py-2 bg-white rounded-xl shadow-sm text-sm font-semibold text-gray-600 border border-gray-100">💤 Sleep Science</span>
                 <span class="px-4 py-2 bg-white rounded-xl shadow-sm text-sm font-semibold text-gray-600 border border-gray-100">🚭 Addiction Education</span>
             </div>
+            
+            <div class="text-center mb-6">
+                 <button onclick="switchTab('publications')" class="text-sm text-blue-600 hover:text-blue-800 font-semibold underline decoration-2 underline-offset-4">
+                    <i class="fas fa-arrow-right"></i> View Published Books
+                 </button>
+            </div>
+
             <div class="glass-card rounded-[2rem] p-8 border-l-4 border-yellow-400 bg-yellow-50/50">
                 <h3 class="text-lg font-bold mb-2 flex items-center gap-2">
                     <i class="fas fa-shield-alt text-yellow-600"></i> Disclaimer & Ethics
@@ -503,6 +569,11 @@
         </div>
 
         <footer class="mt-auto py-10 text-center border-t border-gray-200/50 mt-12">
+            <div class="flex justify-center gap-6 mb-4 text-xs font-medium text-gray-500">
+                <button onclick="switchTab('overview')" class="hover:text-black transition">Home</button>
+                <button onclick="switchTab('publications')" class="hover:text-black transition">Publications</button>
+                <button onclick="switchTab('connect')" class="hover:text-black transition">Contact</button>
+            </div>
             <p class="text-xs text-gray-400 font-medium">&copy; 2026 Mourad Karami. All Rights Reserved.</p>
             <p class="text-[10px] text-gray-300 mt-2 max-w-md mx-auto">
                 Verified Medical Student. Content for educational purposes only. Not a licensed physician in your jurisdiction.
