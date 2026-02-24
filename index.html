@@ -95,7 +95,7 @@
       "@graph": [
         {
           "@type": "ProfilePage",
-          "@id": "https://www.mouradkarami.com/",
+          "@id": "https://www.mouradkarami.com/#profilepage",
           "name": "Mourad Karami - Official Profile",
           "mainEntity": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
           "breadcrumb": { "@id": "https://www.mouradkarami.com/#breadcrumb" },
@@ -108,6 +108,7 @@
           "@type": "WebPage",
           "@id": "https://www.mouradkarami.com/#webpage",
           "url": "https://www.mouradkarami.com/",
+          "mainEntityOfPage": "https://www.mouradkarami.com/",
           "name": "Mourad Karami – Official Website",
           "primaryImageOfPage": { "@id": "https://www.mouradkarami.com/#profile-image" },
           "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
@@ -129,11 +130,13 @@
           "url": "https://www.mouradkarami.com/",
           "logo": "https://i.imgur.com/cOFTbkR.jpeg",
           "sameAs": [
-            "https://www.instagram.com/doc.karami",
-            "https://www.youtube.com/@doc.karami",
-            "https://www.tiktok.com/@doc.karami",
-            "https://www.linkedin.com/in/dockarami"
-          ],
+  "https://www.instagram.com/doc.karami",
+  "https://www.youtube.com/@doc.karami",
+  "https://www.tiktok.com/@doc.karami",
+  "https://www.linkedin.com/in/dockarami",
+  "https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/",
+  "https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html"
+],
           "founder": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
         },
         {
@@ -181,46 +184,180 @@
           "author": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
           "url": "https://doi.org/10.5281/zenodo.18308134",
           "sameAs": "https://doi.org/10.5281/zenodo.18308134",
-          "publisher": "Zenodo",
+          "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+          "publisher": {
+  "@type": "Organization",
+  "name": "Zenodo",
+  "sameAs": "https://zenodo.org/"
+},
           "datePublished": "2025",
           "inLanguage": "en"
         },
-        {
-          "@type": "Person",
-          "@id": "https://www.mouradkarami.com/#mourad-karami",
-          "name": "Mourad Karami",
-          "birthDate": "2007-06-02",
-          "alternateName": ["doc.karami", "Mourad Karami MD Candidate"],
-          "jobTitle": ["Medical Student", "Health Educator"],
-          "image": { "@id": "https://www.mouradkarami.com/#profile-image" },
-          "nationality": "Moroccan",
-          "url": "https://www.mouradkarami.com/",
-          "worksFor": { "@id": "https://www.mouradkarami.com/#organization" },
-          "hasOccupation": [
-            { "@type": "Occupation", "name": "Medical Student Researcher", "occupationLocation": { "@type": "Country", "name": "Romania" } },
-            { "@type": "Occupation", "name": "Health Educator", "occupationLocation": { "@type": "Country", "name": "Morocco" } }
-          ],
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Grigore T. Popa University of Medicine and Pharmacy",
-            "sameAs": "https://www.umfiasi.ro/"
-          },
-          "knowsAbout": ["Public Health", "Hematology", "Preventive Medicine", "Medical Communication"],
-          "sameAs": [
-            "https://share.google/5BeUtPgwrtO77W28h",
-            "https://doi.org/10.5281/zenodo.18308134",
-            "https://sciprofiles.com/profile/dockarami",
-            "https://www.researchgate.net/profile/Mourad-Karami",
-            "https://orcid.org/0009-0006-0365-7616",
-            "https://www.instagram.com/doc.karami",
-            "https://www.youtube.com/@doc.karami",
-            "https://www.tiktok.com/@doc.karami",
-            "https://www.linkedin.com/in/dockarami",
-            "https://marrakech7.com/457-3/",
-            "https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html",
-            "https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/"
-          ]
-        }
+  {
+ "@type": "Person",
+ "@id": "https://www.mouradkarami.com/#mourad-karami",
+ "name": "Mourad Karami",
+ "alternateName": ["doc.karami", "Mourad Karami MD Candidate"],
+"additionalType": "https://dbpedia.org/ontology/Person",
+ "url": "https://www.mouradkarami.com/",
+ "image": [
+   "https://i.imgur.com/cOFTbkR.jpeg",
+   { "@id": "https://www.mouradkarami.com/#profile-image" }
+ ],
+
+ "gender": "Male",
+
+ "birthDate": "2007-06-02",
+ "birthPlace": { "@type": "Place", "name": "Morocco" },
+ "nationality": "Moroccan",
+
+  "homeLocation": [
+    { "@type": "Place", "name": "Morocco" },
+    { "@type": "Place", "name": "Iași, Romania" }
+  ],
+
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "name": "ORCID",
+      "value": "0009-0006-0365-7616"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DOI",
+      "value": "10.5281/zenodo.18308134"
+    }
+  ],
+
+  "affiliation": {
+    "@type": "EducationalOrganization",
+    "name": "Grigore T. Popa University of Medicine and Pharmacy",
+    "sameAs": "https://www.umfiasi.ro/"
+  },
+
+  "award": [
+  "Featured in Morocco World News (2026)",
+  "Interviewed by Hespress on medical misinformation (2026)"
+],
+
+  "description": "Mourad Karami is a Moroccan medical student and health educator known for creating evidence-based medical content and combating health misinformation across social media platforms in the MENA region.",
+
+  "mainEntityOfPage": "https://www.mouradkarami.com/",
+
+  "worksFor": { "@id": "https://www.mouradkarami.com/#organization" },
+
+  "knowsLanguage": ["Arabic", "French", "English"],
+
+  "jobTitle": [
+  "Medical Student",
+  "Health Educator",
+  "Digital Creator",
+  "Internet Personality"
+],
+  "hasOccupation": [
+    { "@type": "Occupation", "name": "Health Educator" },
+    { "@type": "Occupation", "name": "Medical Student" },
+    { "@type": "Occupation", "name": "Digital Creator" },
+    { "@type": "Occupation", "name": "Public Speaker" }
+  ],
+
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Grigore T. Popa University of Medicine and Pharmacy",
+    "sameAs": "https://www.umfiasi.ro/"
+  },
+
+  "knowsAbout": [
+    "Public Health",
+    "Medical Communication",
+    "Preventive Medicine",
+    "Hematology",
+    "Health Education"
+  ],
+
+  "subjectOf": [
+    "https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/",
+    "https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html",
+    "https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation",
+    "https://marrakech7.com/457-3/",
+    "https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html",
+    "https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/"
+  ],
+
+  "sameAs": [
+  "https://www.mouradkarami.com/",
+  "https://www.instagram.com/doc.karami",
+  "https://www.youtube.com/@doc.karami",
+  "https://www.tiktok.com/@doc.karami",
+  "https://www.linkedin.com/in/dockarami",
+  "https://orcid.org/0009-0006-0365-7616",
+  "https://www.researchgate.net/profile/Mourad-Karami",
+"https://wikialpha.co/wiki/Mourad_Karami",
+  "https://doi.org/10.5281/zenodo.18308134",
+  "https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/",
+  "https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html",
+  "https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation",
+  "https://marrakech7.com/457-3/",
+  "https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html",
+  "https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/"
+]
+},
+{
+ "@type": "WebSite",
+ "@id": "https://www.mouradkarami.com/#website",
+ "url": "https://www.mouradkarami.com/",
+ "name": "Mourad Karami Official Website",
+"about": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+ "publisher": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+ "sameAs": [
+   "https://www.instagram.com/doc.karami",
+   "https://www.youtube.com/@doc.karami",
+   "https://www.tiktok.com/@doc.karami",
+   "https://www.linkedin.com/in/dockarami"
+ ]
+},
+{
+  "@type": "NewsArticle",
+  "@id": "https://www.mouradkarami.com/#news-mwn",
+  "headline": "Doc.Karami: A Moroccan Medical Student’s Mission to Use Social Media to Fight Health Misinformation",
+  "url": "https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/",
+  "datePublished": "2026-01-01",
+  "author": { "@type": "Organization", "name": "Morocco World News" },
+  "publisher": {
+  "@type": "Organization",
+  "name": "Morocco World News",
+  "sameAs": "https://www.moroccoworldnews.com/"
+},
+  "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
+},
+{
+  "@type": "NewsArticle",
+  "@id": "https://www.mouradkarami.com/#news-hespress",
+  "headline": "Ramadan : quand la désinformation médicale sur les réseaux sociaux met la santé des jeûneurs en danger",
+  "url": "https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html",
+  "datePublished": "2026-02-01",
+  "author": { "@type": "Organization", "name": "Hespress" },
+  "publisher": {
+  "@type": "Organization",
+  "name": "Hespress",
+  "sameAs": "https://fr.hespress.com/"
+},
+  "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
+},
+{
+  "@type": "NewsArticle",
+  "@id": "https://www.mouradkarami.com/#news-epinews",
+  "headline": "Doc.Karami: A Moroccan Medical Student’s Mission to Use Social Media to Fight Health Misinformation",
+  "url": "https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation",
+  "datePublished": "2026-01-01",
+  "author": { "@type": "Organization", "name": "EpiNews" },
+  "publisher": {
+  "@type": "Organization",
+  "name": "Epinews",
+  "sameAs": "https://epinews.emphnet.net/"
+},
+  "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
+}
       ]
     }
     </script>
@@ -386,6 +523,30 @@
                     <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Health Awareness Coverage"</h3>
                     <p class="text-xs text-gray-500 italic">"International coverage of medical initiatives..."</p>
                 </a>
+                <a href="https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-green-500 cursor-pointer">
+    <div class="flex justify-between items-start mb-4">
+        <span class="text-xl font-black text-gray-300 group-hover:text-green-600 transition">MWN</span>
+        <i class="fas fa-external-link-alt text-gray-300"></i>
+    </div>
+    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Doc.Karami: Fighting Health Misinformation"</h3>
+    <p class="text-xs text-gray-500 italic">International feature on health education and social media impact.</p>
+</a>
+<a href="https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-indigo-500 cursor-pointer">
+    <div class="flex justify-between items-start mb-4">
+        <span class="text-xl font-black text-gray-300 group-hover:text-indigo-600 transition">HESPRESS</span>
+        <i class="fas fa-external-link-alt text-gray-300"></i>
+    </div>
+    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Ramadan & Medical Misinformation"</h3>
+    <p class="text-xs text-gray-500 italic">Interview discussing health myths and fasting misinformation.</p>
+</a>
+<a href="https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-yellow-500 cursor-pointer">
+    <div class="flex justify-between items-start mb-4">
+        <span class="text-xl font-black text-gray-300 group-hover:text-yellow-600 transition">EPINEWS</span>
+        <i class="fas fa-external-link-alt text-gray-300"></i>
+    </div>
+    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"A Moroccan Student Using Social Media for Health"</h3>
+    <p class="text-xs text-gray-500 italic">Regional public health coverage of educational content initiatives.</p>
+</a>
             </div>
             <div class="glass-card rounded-[2rem] p-8 mt-6">
                 <h3 class="text-lg font-bold mb-4">Public Speaking & Education</h3>
