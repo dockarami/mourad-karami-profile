@@ -1,647 +1,993 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth antialiased">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mourad Karami | Medical Student & Health Educator</title>
+  <!-- Basic meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mourad Karami – Medical Student & Health Educator</title>
+  <meta name="description" content="Official website of Mourad Karami (Doc.karami), Moroccan medical student and health educator fighting medical misinformation and promoting evidence-based medicine." />
+  <meta name="robots" content="index, follow" />
 
-    <meta name="description" content="Official Hub of Mourad Karami (doc.karami). Medical Student and Health Educator transforming health awareness in Morocco & Romania.">
-    <meta name="author" content="Mourad Karami">
-    <link rel="canonical" href="https://www.mouradkarami.com/">
-    <meta name="theme-color" content="#F5F5F7">
-    <meta name="google-site-verification" content="HxuRxF0tiqhPVt3pDr41JftmKabU0t8cMC0LomGfAlg">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.mouradkarami.com/" />
 
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Mourad Karami | Medical Student & Educator">
-    <meta property="og:description" content="Official portfolio: Press, Research, and Medical Education. Health Educator and Medical Student.">
-    <meta property="og:image" content="https://i.imgur.com/cOFTbkR.jpeg">
-    <meta property="og:url" content="https://www.mouradkarami.com/">
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="HxuRxF0tiqhPVt3pDr41JftmKabU0t8cMC0LomGfAlg" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Inter"', 'sans-serif'],
-                        display: ['"SF Pro Display"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            blue: '#007AFF',
-                            dark: '#1D1D1F',
-                            text: '#86868B',
-                            bg: '#F5F5F7'
-                        }
-                    },
-                    animation: {
-                        'float': 'float 8s ease-in-out infinite',
-                        'fade-in': 'fadeIn 0.5s ease-out forwards',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-15px)' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(10px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mourad Karami – Medical Student & Health Educator" />
+  <meta property="og:description" content="Moroccan medical student and health educator creating evidence-based content to fight medical misinformation and make science accessible." />
+  <meta property="og:url" content="https://www.mouradkarami.com/" />
+  <meta property="og:image" content="https://www.mouradkarami.com/mourad-karami.jpg" />
 
-    <style>
-        body { background-color: #F5F5F7; color: #1D1D1F; }
-        
-        /* Fixed: Stronger glass effect so nav is never invisible */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.90);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mourad Karami – Medical Student & Health Educator" />
+  <meta name="twitter:description" content="Medical student and health educator focused on evidence-based medicine and health misinformation awareness." />
+  <meta name="twitter:image" content="https://www.mouradkarami.com/mourad-karami.jpg" />
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
-        }
-
-        .tab-btn { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .tab-btn.active { background: white; color: black; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        
-        .view-section { display: none; opacity: 0; transform: translateY(10px); transition: opacity 0.4s ease, transform 0.4s ease; }
-        .view-section.active { display: block; opacity: 1; transform: translateY(0); }
-        
-        .text-gradient { background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Hide scrollbar for nav but keep functionality */
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://www.mouradkarami.com/#mourad-karami",
-      "name": "Mourad Karami",
-      "givenName": "Mourad",
-      "familyName": "Karami",
-      "alternateName": ["doc.karami", "Mourad Karami MD Candidate"],
-      "url": "https://www.mouradkarami.com/",
-      "mainEntityOfPage": {"@id": "https://www.mouradkarami.com/#webpage"},
-      "image": "https://i.imgur.com/cOFTbkR.jpeg",
-      "gender": "Male",
-      "birthDate": "2007-06-02",
-      "birthPlace": {"@type": "Place", "name": "Morocco"},
-      "nationality": "Moroccan",
-      "description": "Mourad Karami is a Moroccan medical student and health educator known for creating evidence-based medical content and combating health misinformation across the MENA region.",
-      "knowsLanguage": ["Arabic","French","English"],
-      "knowsAbout": [
-        "Public Health",
-        "Medical Education",
-        "Health Communication",
-        "Preventive Medicine",
-        "Medical Misinformation"
-      ],
-      "identifier": [
-        {
-          "@type": "PropertyValue",
-          "name": "ORCID",
-          "value": "0009-0006-0365-7616",
-          "url": "https://orcid.org/0009-0006-0365-7616"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "DOI",
-          "value": "10.5281/zenodo.18308134",
-          "url": "https://doi.org/10.5281/zenodo.18308134"
-        }
-      ],
-      "affiliation": {
-        "@type": "EducationalOrganization",
-        "name": "Grigore T. Popa University of Medicine and Pharmacy",
-        "sameAs": "https://www.umfiasi.ro/"
-      },
-      "jobTitle": [
-        "Medical Student",
-        "Health Educator",
-        "Digital Creator",
-        "Internet Personality"
-      ],
-      "sameAs": [
-        "https://orcid.org/0009-0006-0365-7616",
-        "https://www.linkedin.com/in/dockarami",
-        "https://www.researchgate.net/profile/Mourad-Karami",
-        "https://wikialpha.co/wiki/Mourad_Karami",
-        "https://www.instagram.com/doc.karami",
-        "https://www.youtube.com/@doc.karami",
-        "https://www.tiktok.com/@doc.karami"
-      ],
-      "subjectOf": [
-        {
-          "@type": "NewsArticle",
-          "headline": "Doc.Karami: A Moroccan Medical Student’s Mission to Use Social Media to Fight Health Misinformation",
-          "url": "https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Morocco World News",
-            "sameAs": "https://www.moroccoworldnews.com/"
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f3c6e',
+            primaryLight: '#1f4f8a',
+            accent: '#e5f0ff'
           }
-        },
-        {
-          "@type": "NewsArticle",
-          "headline": "Ramadan : quand la désinformation médicale sur les réseaux sociaux met la santé des jeûneurs en danger",
-          "url": "https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Hespress",
-            "sameAs": "https://fr.hespress.com/"
-          }
-        },
-        {"@type": "NewsArticle", "url": "https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation"},
-        {"@type": "NewsArticle", "url": "https://marrakech7.com/457-3/"},
-        {"@type": "NewsArticle", "url": "https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html"},
-        {"@type": "NewsArticle", "url": "https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/"}
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.mouradkarami.com/#website",
-      "url": "https://www.mouradkarami.com/",
-      "name": "Mourad Karami Official Website",
-      "inLanguage": "en",
-      "about": {"@id": "https://www.mouradkarami.com/#mourad-karami"},
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.mouradkarami.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
+        }
       }
-    },
-    {
-      "@type": ["WebPage","ProfilePage"],
-      "@id": "https://www.mouradkarami.com/#webpage",
-      "url": "https://www.mouradkarami.com/",
-      "name": "Mourad Karami | Medical Student & Health Educator",
-      "description": "Official hub of Mourad Karami (doc.karami): press, research, and medical education focused on combating health misinformation in the MENA region.",
-      "isPartOf": {"@id": "https://www.mouradkarami.com/#website"},
-      "about": {"@id": "https://www.mouradkarami.com/#mourad-karami"},
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://i.imgur.com/cOFTbkR.jpeg"
-      },
-      "inLanguage": "en",
-      "author": {"@id": "https://www.mouradkarami.com/#mourad-karami"}
-    },
-    {
-      "@type": "Book",
-      "@id": "https://www.mouradkarami.com/#book",
-      "name": "Clinical Hematology & Public Health",
-      "author": {"@id": "https://www.mouradkarami.com/#mourad-karami"},
-      "publisher": {
-        "@type": "Organization",
-        "name": "Zenodo",
-        "sameAs": "https://zenodo.org/"
-      },
-      "url": "https://doi.org/10.5281/zenodo.18308134",
-      "datePublished": "2025",
-      "inLanguage": "en"
     }
-  ]
-}
-</script>
+  </script>
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://www.mouradkarami.com/#website",
+        "url": "https://www.mouradkarami.com/",
+        "name": "Mourad Karami Official Website",
+        "inLanguage": "en",
+        "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
+      },
+
+      {
+        "@type": ["WebPage","ProfilePage"],
+        "@id": "https://www.mouradkarami.com/#webpage",
+        "url": "https://www.mouradkarami.com/",
+        "name": "Mourad Karami – Medical Student & Health Educator",
+        "isPartOf": { "@id": "https://www.mouradkarami.com/#website" },
+        "about": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+        "mainEntity": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+        "inLanguage": "en"
+      },
+
+      {
+        "@type": "ImageObject",
+        "@id": "https://www.mouradkarami.com/#profileimage",
+        "url": "https://www.mouradkarami.com/mourad-karami.jpg",
+        "contentUrl": "https://www.mouradkarami.com/mourad-karami.jpg"
+      },
+
+      {
+        "@type": "Organization",
+        "@id": "https://www.mouradkarami.com/#brand",
+        "name": "Doc.karami",
+        "url": "https://www.mouradkarami.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.mouradkarami.com/mourad-karami.jpg"
+        },
+        "sameAs": [
+          "https://www.instagram.com/doc.karami",
+          "https://www.youtube.com/@doc.karami",
+          "https://www.tiktok.com/@doc.karami"
+        ],
+        "founder": { "@id": "https://www.mouradkarami.com/#mourad-karami" }
+      },
+
+      {
+        "@type": "Person",
+        "@id": "https://www.mouradkarami.com/#mourad-karami",
+        "name": "Mourad Karami",
+        "alternateName": "Doc.karami",
+        "nationality": "Moroccan",
+        "jobTitle": ["Medical Student", "Health Educator"],
+        "description": "Moroccan medical student and health educator creating evidence-based educational content to fight medical misinformation and make complex topics accessible.",
+        "url": "https://www.mouradkarami.com/",
+        "image": { "@id": "https://www.mouradkarami.com/#profileimage" },
+        "mainEntityOfPage": { "@id": "https://www.mouradkarami.com/#webpage" },
+        "birthDate": "2007-06-02",
+        "birthPlace": { "@type": "Place", "name": "Marrakech, Morocco" },
+
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Doc.karami"
+        },
+
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Grigore T. Popa University of Medicine and Pharmacy",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Iași",
+            "addressCountry": "Romania"
+          }
+        },
+
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Grigore T. Popa University of Medicine and Pharmacy",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Iași",
+            "addressCountry": "Romania"
+          },
+          "department": {
+            "@type": "EducationalOrganization",
+            "name": "Faculty of Medicine (French section)"
+          }
+        },
+
+        "email": "mailto:contact@mouradkarami.com",
+        "award": "Media coverage for health education and medical misinformation awareness",
+
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Medical Education",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Grigore T. Popa University of Medicine and Pharmacy"
+          }
+        },
+
+        "knowsAbout": [
+          "Medical education",
+          "Health misinformation",
+          "Evidence-based medicine",
+          "Public health communication",
+          "Anatomy education",
+          "Physiology education"
+        ],
+
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "name": "ORCID",
+            "value": "0009-0006-0365-7616",
+            "url": "https://orcid.org/0009-0006-0365-7616"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "DOI",
+            "value": "10.5281/zenodo.18308134",
+            "url": "https://doi.org/10.5281/zenodo.18308134"
+          }
+        ],
+
+        "subjectOf": [
+          { "@type": "NewsArticle", "url": "https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/" },
+          { "@type": "NewsArticle", "url": "https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html" },
+          { "@type": "NewsArticle", "url": "https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation" },
+          { "@type": "NewsArticle", "url": "https://www.radioiasi.ro/staisigurpenet/audio-influencer-si-student-umf-iasi-mourad-karami-foloseste-retelele-sociale-pentru-a-combate-dezinformarea-medicala/" },
+          { "@type": "NewsArticle", "url": "https://www.ziarulevenimentul.ro/stiri/moldova/de-la-ia-i-un-student-marocan-face-ordine-in-haosul-informational-medical--217594821.html" },
+          { "@type": "NewsArticle", "url": "https://www.ziarulevenimentul.ro/stiri/moldova/medicina-explicata-pe-tiktok-de-catre-un-student-din-maroc--217594812.html" },
+          { "@type": "NewsArticle", "url": "https://www.bzi.ro/student-la-medicina-din-iasi-urmarit-de-peste-150-000-de-oameni-online-lupta-cu-dezinformarea-medicala-de-pe-internet-5486385" },
+          { "@type": "NewsArticle", "url": "https://www.medicalmanager.ro/din-amfiteatru-in-online-un-student-international-la-umf-iasi-combate-dezinformarea-medicala/" },
+          { "@type": "NewsArticle", "url": "https://www.viata-medicala.ro/un-student-international-de-la-umf-iasi-face-educatie-medicala-in-mediul-online-44673" },
+          { "@type": "NewsArticle", "url": "https://news.umfiasi.ro/din-amfiteatru-in-online-un-student-international-la-umf-iasi-combate-dezinformarea-medicala/" },
+          { "@type": "NewsArticle", "url": "https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html" },
+          { "@type": "NewsArticle", "url": "https://marrakech7.com/457-3/" },
+          { "@type": "NewsArticle", "url": "https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/" }
+        ],
+
+        "sameAs": [
+          "https://orcid.org/0009-0006-0365-7616",
+          "https://www.researchgate.net/profile/Mourad-Karami",
+          "https://sciprofiles.com/profile/dockarami",
+          "https://www.instagram.com/doc.karami",
+          "https://www.tiktok.com/@doc.karami",
+          "https://www.youtube.com/@doc.karami",
+          "https://www.linkedin.com/in/dockarami",
+          "https://www.wikidata.org/wiki/Q138455559",
+          "https://wikialpha.co/wiki/Mourad_Karami",
+          "https://www.mouradkarami.com/"
+        ]
+      },
+
+      {
+        "@type": "Book",
+        "@id": "https://doi.org/10.5281/zenodo.18308134",
+        "name": "Metabolic Architecture",
+        "author": { "@id": "https://www.mouradkarami.com/#mourad-karami" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zenodo",
+          "url": "https://zenodo.org"
+        },
+        "url": "https://doi.org/10.5281/zenodo.18308134",
+        "inLanguage": "en",
+        "datePublished": "2025",
+        "description": "Educational publication by Mourad Karami exploring metabolic pathways, their structure, and clinical relevance."
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mouradkarami.com/"
+          }
+        ]
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.mouradkarami.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Mourad Karami a licensed doctor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mourad Karami is currently a medical student at Grigore T. Popa University of Medicine and Pharmacy in Iași, Romania. His content is educational and does not replace professional medical consultation."
+            }
+          }
+        ]
+      }
+
+    ]
+  }
+  </script>
 </head>
+<!-- HEADER / NAVBAR -->
+<header class="border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
-<body class="selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
+    <!-- Logo / Name -->
+    <a href="#top" class="flex items-center space-x-2">
+      <div class="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-semibold">
+        MK
+      </div>
+      <span class="font-semibold text-sm sm:text-base text-primary">Mourad Karami</span>
+    </a>
 
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-        <div class="absolute top-[-10%] left-[-10%] w-[900px] h-[900px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-float"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[700px] h-[700px] bg-purple-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 animate-float" style="animation-delay: 2s"></div>
-        <div class="absolute top-[40%] left-[30%] w-[500px] h-[500px] bg-green-50 rounded-full mix-blend-multiply filter blur-[100px] opacity-50 animate-float" style="animation-delay: 4s"></div>
+    <!-- Mobile Toggle -->
+    <button id="navToggle" class="sm:hidden p-2 text-slate-500 hover:text-primary">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor">
+        <path id="navIconOpen" stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <path id="navIconClose" class="hidden" stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <nav id="navMenu" class="hidden sm:flex space-x-6 text-sm font-medium text-slate-700">
+      <a href="#about" class="hover:text-primary">About</a>
+      <a href="#mission" class="hover:text-primary">Mission</a>
+      <a href="#press" class="hover:text-primary">Press</a>
+      <a href="#publications" class="hover:text-primary">Publications</a>
+      <a href="#education" class="hover:text-primary">Education</a>
+      <a href="#academic-profiles" class="hover:text-primary">Academic Profiles</a>
+      <a href="#social" class="hover:text-primary">Social Media</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="navMenuMobile" class="sm:hidden hidden border-t border-slate-200 bg-white">
+    <div class="px-4 py-3 space-y-2 text-sm font-medium text-slate-700">
+      <a href="#about" class="block hover:text-primary">About</a>
+      <a href="#mission" class="block hover:text-primary">Mission</a>
+      <a href="#press" class="block hover:text-primary">Press</a>
+      <a href="#publications" class="block hover:text-primary">Publications</a>
+      <a href="#education" class="block hover:text-primary">Education</a>
+      <a href="#academic-profiles" class="block hover:text-primary">Academic Profiles</a>
+      <a href="#social" class="block hover:text-primary">Social Media</a>
+      <a href="#contact" class="block hover:text-primary">Contact</a>
+    </div>
+  </nav>
+</header>
+<!-- HERO -->
+<section id="top" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-24">
+  <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+    <!-- Left Text Column -->
+    <div>
+      <span class="inline-block px-3 py-1 bg-accent text-primary rounded-full text-xs font-semibold mb-4">
+        Medical Student & Health Educator
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+        Mourad Karami
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 mb-4">
+        Also known online as <span class="font-semibold text-primary">Doc.karami</span>, Mourad is a Moroccan medical student
+        dedicated to fighting medical misinformation and making evidence‑based health education accessible to young audiences.
+      </p>
+
+      <p class="text-sm sm:text-base text-slate-600 mb-6">
+        He explains complex medical and scientific topics in simple language, helping people think critically about the health
+        information they see online.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 mb-8">
+        <a href="#mission" class="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primaryLight">
+          Learn about the mission
+        </a>
+        <a href="#press" class="px-4 py-2 rounded-full border border-primary text-primary text-sm font-semibold hover:bg-primary hover:text-white">
+          Press & Media
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 text-sm">
+        <a href="https://www.instagram.com/doc.karami" target="_blank" class="text-slate-500 hover:text-primary">Instagram</a>
+        <a href="https://www.tiktok.com/@doc.karami" target="_blank" class="text-slate-500 hover:text-primary">TikTok</a>
+        <a href="https://www.youtube.com/@doc.karami" target="_blank" class="text-slate-500 hover:text-primary">YouTube</a>
+        <a href="https://www.linkedin.com/in/dockarami" target="_blank" class="text-slate-500 hover:text-primary">LinkedIn</a>
+      </div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 lg:px-8 py-6 min-h-screen flex flex-col">
+    <!-- Right Image Column -->
+    <div class="flex justify-center lg:justify-end">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-accent rounded-3xl blur-xl opacity-70"></div>
 
-        <nav class="sticky top-4 z-50 glass-nav rounded-2xl p-2 mb-8 flex flex-col lg:flex-row justify-between items-center shadow-lg transition-all">
-            <div class="flex items-center gap-4 px-4 py-2 w-full lg:w-auto justify-between lg:justify-start">
-                <div class="flex items-center gap-3">
-                    <div class="relative group cursor-pointer">
-                        <img src="https://i.imgur.com/cOFTbkR.jpeg" alt="Mourad Karami" class="w-10 h-10 rounded-full object-cover ring-2 ring-white shadow-md">
-                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>
-                    </div>
-                    <div class="leading-tight">
-                        <h1 class="text-sm font-bold text-gray-900 flex items-center gap-2">
-                            Mourad Karami 
-                            <i class="fas fa-stethoscope text-brand-blue opacity-90"></i>
-                        </h1>
-                        <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Medical Student & Health Educator</p>
-                    </div>
-                </div>
-            </div>
+        <div class="relative bg-white border border-slate-200 rounded-3xl p-4 shadow-sm max-w-xs sm:max-w-sm">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 flex items-center justify-center">
+            <img src="https://www.mouradkarami.com/mourad-karami.jpg"
+                 alt="Portrait of Mourad Karami"
+                 class="w-full h-full object-cover" />
+          </div>
 
-            <div class="w-full lg:w-auto overflow-x-auto pb-1 lg:pb-0 hide-scrollbar">
-                <div class="flex bg-gray-100/50 p-1 rounded-xl whitespace-nowrap min-w-max">
-                    <button onclick="switchTab('overview')" id="btn-overview" class="tab-btn active px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-black cursor-pointer">Overview</button>
-                    <button onclick="switchTab('press')" id="btn-press" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-black cursor-pointer">Press & Media</button>
-                    <button onclick="switchTab('publications')" id="btn-publications" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-black cursor-pointer">Publications</button>
-                    <button onclick="switchTab('research')" id="btn-research" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-black cursor-pointer">Verified Profiles</button>
-                    <button onclick="switchTab('medical')" id="btn-medical" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-black cursor-pointer">Medical Hub</button>
-                    <button onclick="switchTab('connect')" id="btn-connect" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-black cursor-pointer">Collaborations</button>
-                </div>
-            </div>
-        </nav>
-
-        <div id="view-overview" class="view-section active space-y-6">
-            <div class="glass-card rounded-[2rem] p-8 lg:p-12 relative overflow-hidden group">
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest mb-4 border border-blue-100">
-                            <i class="fas fa-check-circle"></i> Recognized across media and academic platforms
-                        </div>
-                        <h2 class="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6 leading-tight">
-                            Simplifying Medicine for <br>
-                            <span class="text-gradient">The Next Generation.</span>
-                        </h2>
-                        <p class="text-lg text-gray-600 mb-8 leading-relaxed overview-bio">
-                            Mourad Karami is a Moroccan medical student at <strong>Grigore T. Popa University of Medicine and Pharmacy</strong>, known for health education and public medical awareness across social platforms. He creates evidence-based content to combat misinformation in the MENA region.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <button onclick="switchTab('press')" class="px-6 py-3 rounded-full bg-black text-white font-semibold text-sm hover:bg-gray-800 transition shadow-lg cursor-pointer">
-                                View Press Coverage
-                            </button>
-                            <a href="https://www.instagram.com/doc.karami" target="_blank" class="px-6 py-3 rounded-full bg-white text-gray-800 border border-gray-200 font-semibold text-sm hover:bg-gray-50 transition cursor-pointer">
-                                <i class="fab fa-instagram mr-2"></i> Instagram
-                            </a>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition">
-                            <h3 class="text-3xl font-bold text-gray-900">100K+</h3>
-                            <p class="text-xs text-gray-500 uppercase font-bold mt-1">Audience</p>
-                        </div>
-                        <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition">
-                            <h3 class="text-3xl font-bold text-gray-900">3+</h3>
-                            <p class="text-xs text-gray-500 uppercase font-bold mt-1">Major Media Features</p>
-                        </div>
-                        <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition col-span-2">
-                            <h3 class="text-xl font-bold text-gray-900">MA / RO</h3>
-                            <p class="text-xs text-gray-500 uppercase font-bold mt-1">Based In</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card rounded-[2rem] p-8">
-                    <h3 class="text-lg font-bold mb-6 flex items-center gap-2"><i class="fas fa-history text-blue-500"></i> Career Timeline</h3>
-                    <div class="space-y-6 relative border-l-2 border-gray-100 ml-3 pl-6">
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-white"></span>
-                            <p class="text-xs font-bold text-blue-500 mb-1">2031 (Projected)</p>
-                            <h4 class="font-bold text-gray-900">Doctor of Medicine (MD) Graduation</h4>
-                            <p class="text-xs text-gray-500">Completion of medical studies at UMF Iași.</p>
-                        </div>
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 bg-gray-300 rounded-full border-2 border-white"></span>
-                            <p class="text-xs font-bold text-gray-400 mb-1">2026 (Current)</p>
-                            <h4 class="font-bold text-gray-900">Academic & Press Growth</h4>
-                            <p class="text-xs text-gray-500">Expanding medical knowledge and media presence.</p>
-                        </div>
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 bg-gray-300 rounded-full border-2 border-white"></span>
-                            <p class="text-xs font-bold text-gray-400 mb-1">2025</p>
-                            <h4 class="font-bold text-gray-900">Medical Studies Started</h4>
-                            <p class="text-xs text-gray-500">Enrolled at UMF Iași, Romania.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-[2rem] p-8">
-                    <h3 class="text-lg font-bold mb-6 flex items-center gap-2"><i class="fas fa-globe text-blue-500"></i> Audience & Language</h3>
-                    <p class="text-sm text-gray-600 mb-6">Content is tailored primarily for the Moroccan and International community, bridging linguistic gaps in medical understanding.</p>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm font-medium">Arabic (Darija)</span>
-                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Native</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm font-medium">English</span>
-                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Professional</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm font-medium">French</span>
-                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Fluent</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="view-press" class="view-section space-y-6">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-display font-bold text-gray-900">Press Coverage</h2>
-                <p class="text-gray-500 mt-2">Verified media features and interviews.</p>
-            </div>
-            <ul class="sr-only">
-                <li>Kech24 – Interview</li>
-                <li>Marrakech7 – Media Feature</li>
-                <li>FluxPress – Health Coverage</li>
-            </ul>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-red-500 cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xl font-black text-gray-300 group-hover:text-red-600 transition">KECH24</span>
-                        <i class="fas fa-external-link-alt text-gray-300"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"The Vision Behind Medical Content Creation"</h3>
-                    <p class="text-xs text-gray-500 italic">"Moroccan medical student simplifying health education..."</p>
-                </a>
-                <a href="https://marrakech7.com/457-3/" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-orange-500 cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xl font-black text-gray-300 group-hover:text-orange-600 transition">M7</span>
-                        <i class="fas fa-external-link-alt text-gray-300"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Mourad Karami: A Rising Medical Voice"</h3>
-                    <p class="text-xs text-gray-500 italic">"Featured interview on youth impact and health..."</p>
-                </a>
-                <a href="https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-blue-500 cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xl font-black text-gray-300 group-hover:text-blue-600 transition">FluxPress</span>
-                        <i class="fas fa-newspaper text-gray-300"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Health Awareness Coverage"</h3>
-                    <p class="text-xs text-gray-500 italic">"International coverage of medical initiatives..."</p>
-                </a>
-                <a href="https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-green-500 cursor-pointer">
-    <div class="flex justify-between items-start mb-4">
-        <span class="text-xl font-black text-gray-300 group-hover:text-green-600 transition">MWN</span>
-        <i class="fas fa-external-link-alt text-gray-300"></i>
-    </div>
-    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Doc.Karami: Fighting Health Misinformation"</h3>
-    <p class="text-xs text-gray-500 italic">International feature on health education and social media impact.</p>
-</a>
-<a href="https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-indigo-500 cursor-pointer">
-    <div class="flex justify-between items-start mb-4">
-        <span class="text-xl font-black text-gray-300 group-hover:text-indigo-600 transition">HESPRESS</span>
-        <i class="fas fa-external-link-alt text-gray-300"></i>
-    </div>
-    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"Ramadan & Medical Misinformation"</h3>
-    <p class="text-xs text-gray-500 italic">Interview discussing health myths and fasting misinformation.</p>
-</a>
-<a href="https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation" target="_blank" class="glass-card p-6 rounded-[2rem] hover:bg-white transition group border-l-4 border-yellow-500 cursor-pointer">
-    <div class="flex justify-between items-start mb-4">
-        <span class="text-xl font-black text-gray-300 group-hover:text-yellow-600 transition">EPINEWS</span>
-        <i class="fas fa-external-link-alt text-gray-300"></i>
-    </div>
-    <h3 class="font-bold text-gray-900 mb-2 leading-snug">"A Moroccan Student Using Social Media for Health"</h3>
-    <p class="text-xs text-gray-500 italic">Regional public health coverage of educational content initiatives.</p>
-</a>
-            </div>
-            <div class="glass-card rounded-[2rem] p-8 mt-6">
-                <h3 class="text-lg font-bold mb-4">Public Speaking & Education</h3>
-                <ul class="space-y-4">
-                    <li class="flex gap-4 items-start">
-                        <span class="bg-blue-100 text-blue-600 p-2 rounded-lg text-xs"><i class="fas fa-microphone"></i></span>
-                        <div>
-                            <h4 class="text-sm font-bold">Online Health Seminars</h4>
-                            <p class="text-xs text-gray-500">Regular live sessions addressing community health concerns.</p>
-                        </div>
-                    </li>
-                    <li class="flex gap-4 items-start">
-                        <span class="bg-purple-100 text-purple-600 p-2 rounded-lg text-xs"><i class="fas fa-users"></i></span>
-                        <div>
-                            <h4 class="text-sm font-bold">Community Awareness</h4>
-                            <p class="text-xs text-gray-500">Campaigns focused on smoking cessation and anemia prevention.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="view-publications" class="view-section space-y-6">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-display font-bold text-gray-900">Books & Publications</h2>
-                <p class="text-gray-500 mt-2">Academic contributions and published works.</p>
-            </div>
-            
-            <div class="glass-card rounded-[2rem] p-8 border-t-4 border-blue-600">
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="w-full md:w-1/4 flex flex-col items-center">
-                        <div class="w-32 h-40 bg-gray-800 rounded-lg shadow-xl flex items-center justify-center text-white text-4xl mb-4">
-                            <i class="fas fa-book-medical"></i>
-                        </div>
-                        <a href="https://doi.org/10.5281/zenodo.18308134" target="_blank" class="px-4 py-2 bg-[#024dad] text-white text-xs font-bold rounded-full hover:bg-blue-800 transition shadow-md cursor-pointer">
-                            <i class="fas fa-external-link-alt mr-1"></i> View on Zenodo
-                        </a>
-                    </div>
-                    <div class="w-full md:w-3/4 space-y-4">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="bg-gray-100 text-gray-600 text-[10px] font-bold px-2 py-1 rounded border border-gray-200">BOOK</span>
-                            <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded border border-blue-100">2025</span>
-                            <span class="bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded border border-green-100">Archived on Zenodo (CERN)</span>
-                        </div>
-                        
-                        <h3 class="text-2xl font-bold text-gray-900 leading-tight">Clinical Hematology & Public Health</h3>
-                        
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            An extensive compilation of medical notes and research focusing on hematological pathologies and preventive public health strategies. This resource bridges the gap between complex medical theory and practical application, designed to assist medical students and health educators in understanding blood disorders within the North African context.
-                        </p>
-                        
-                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 text-xs mt-4">
-                            <p class="font-bold text-gray-400 uppercase text-[10px] mb-2">APA Citation Format</p>
-                            <code class="font-mono text-gray-700 block bg-white p-2 rounded border border-gray-100 select-all">
-                                Karami, M. (2025). Clinical Hematology & Public Health. Zenodo. https://doi.org/10.5281/zenodo.18308134
-                            </code>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <p class="text-xs text-gray-500">
-                                <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.18308134" class="text-blue-600 hover:underline">10.5281/zenodo.18308134</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="view-research" class="view-section space-y-6">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-display font-bold text-gray-900">Verified Profiles</h2>
-                <p class="text-gray-500 mt-2">Academic and professional identity proof.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://orcid.org/0009-0006-0365-7616" target="_blank" class="glass-card rounded-[2rem] p-6 hover:shadow-xl transition group text-center cursor-pointer">
-                    <div class="w-12 h-12 mx-auto bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl mb-3">
-                        <i class="fab fa-orcid"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900">ORCID</h3>
-                    <p class="text-[10px] text-gray-500 mb-2">0009-0006-0365-7616</p>
-                    <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">Verified Researcher</span>
-                </a>
-                <a href="https://www.researchgate.net/profile/Mourad-Karami" target="_blank" class="glass-card rounded-[2rem] p-6 hover:shadow-xl transition group text-center cursor-pointer">
-                    <div class="w-12 h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 text-xl mb-3">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900">ResearchGate</h3>
-                    <p class="text-[10px] text-gray-500 mb-2">Scientific Network</p>
-                    <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Academic Profile</span>
-                </a>
-                <a href="https://sciprofiles.com/profile/dockarami" target="_blank" class="glass-card rounded-[2rem] p-6 hover:shadow-xl transition group text-center cursor-pointer">
-                    <div class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl mb-3">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900">SciProfiles</h3>
-                    <p class="text-[10px] text-gray-500 mb-2">MDPI Network</p>
-                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Contributor</span>
-                </a>
-            </div>
-            <div class="glass-card rounded-[2rem] p-8 text-center opacity-70">
-                <i class="fas fa-book-open text-gray-300 text-3xl mb-3"></i>
-                <h3 class="text-sm font-bold text-gray-500">Peer-Reviewed Publications</h3>
-                <p class="text-xs text-gray-400">Research papers will be listed here upon publication.</p>
-            </div>
-        </div>
-
-        <div id="view-medical" class="view-section space-y-6">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-display font-bold text-gray-900">Medical Hub</h2>
-                <p class="text-gray-500 mt-2">Areas of expertise and ethical standards.</p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <span class="px-4 py-2 bg-white rounded-xl shadow-sm text-sm font-semibold text-gray-600 border border-gray-100">🩸 Hematology Basics</span>
-                <span class="px-4 py-2 bg-white rounded-xl shadow-sm text-sm font-semibold text-gray-600 border border-gray-100">🩺 Preventive Medicine</span>
-                <span class="px-4 py-2 bg-white rounded-xl shadow-sm text-sm font-semibold text-gray-600 border border-gray-100">💤 Sleep Science</span>
-                <span class="px-4 py-2 bg-white rounded-xl shadow-sm text-sm font-semibold text-gray-600 border border-gray-100">🚭 Addiction Education</span>
-            </div>
-            
-            <div class="text-center mb-6">
-                 <button onclick="switchTab('publications')" class="text-sm text-blue-600 hover:text-blue-800 font-semibold underline decoration-2 underline-offset-4 cursor-pointer">
-                    <i class="fas fa-arrow-right"></i> View Published Books
-                 </button>
-            </div>
-
-            <div class="glass-card rounded-[2rem] p-8 border-l-4 border-yellow-400 bg-yellow-50/50">
-                <h3 class="text-lg font-bold mb-2 flex items-center gap-2">
-                    <i class="fas fa-shield-alt text-yellow-600"></i> Disclaimer & Ethics
-                </h3>
-                <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                    Content shared on doc.karami platforms is for <strong>educational purposes only</strong>. It is not a substitute for professional medical consultation, diagnosis, or treatment.
-                </p>
-                <ul class="text-xs text-gray-500 space-y-2">
-                    <li>• No fear-based content or sensationalism.</li>
-                    <li>• All information is cross-referenced with evidence-based sources.</li>
-                    <li>• Misinformation is actively combated.</li>
-                </ul>
-            </div>
-            <div class="glass-card rounded-[2rem] p-8">
-                <h3 class="text-lg font-bold mb-4">Frequently Asked Questions</h3>
-                <div class="space-y-4">
-                    <details class="group">
-                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                            <span>Are you a licensed physician?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                            </span>
-                        </summary>
-                        <p class="text-gray-600 mt-3 group-open:animate-fadeIn text-sm">
-                            I am currently a Medical Student (MD Candidate) at Grigore T. Popa University. I am not yet a licensed physician.
-                        </p>
-                    </details>
-                    <hr class="border-gray-200">
-                    <details class="group">
-                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-                            <span>Do you provide personal medical advice?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                            </span>
-                        </summary>
-                        <p class="text-gray-600 mt-3 group-open:animate-fadeIn text-sm">
-                            No. For legal and ethical reasons, I cannot provide personal diagnoses or treatment plans via DM or email. Please consult your local doctor.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </div>
-
-        <div id="view-connect" class="view-section space-y-8">
-            <div class="glass-card rounded-[2rem] p-10 text-center max-w-2xl mx-auto">
-                <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">Brand & Collaboration Guidelines</h2>
-                <p class="text-sm text-gray-500 mb-8 leading-relaxed">
-                    I partner with organizations that align with public health values. Please review the criteria below before reaching out.
-                </p>
-                <div class="text-left bg-white/50 p-6 rounded-xl mb-8 text-sm space-y-3">
-                    <p class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Accepted: Educational Campaigns, Public Health Initiatives, Accredited Institutions.</p>
-                    <p class="flex items-center gap-2"><i class="fas fa-times text-red-500"></i> Declined: Unverified Supplements, Pseudo-science, Gambling/Crypto.</p>
-                </div>
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="mailto:karami.mourad.doc@gmail.com" class="btn-primary px-8 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm bg-black text-white hover:bg-gray-800 transition cursor-pointer">
-                        <i class="fas fa-envelope"></i> Send Proposal
-                    </a>
-                    <a href="https://www.linkedin.com/in/dockarami" target="_blank" class="px-8 py-3 rounded-xl font-bold bg-blue-50 text-blue-600 hover:bg-blue-100 transition flex items-center justify-center gap-2 text-sm cursor-pointer">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </div>
-                <div class="mt-12 pt-8 border-t border-gray-200">
-                    <p class="text-xs font-bold text-gray-400 uppercase mb-4">Stay Updated</p>
-                    <button disabled class="px-6 py-2 bg-gray-100 text-gray-400 rounded-full text-xs font-bold cursor-not-allowed">Newsletter Coming Soon</button>
-                </div>
-            </div>
-        </div>
-
-        <footer class="mt-auto py-10 text-center border-t border-gray-200/50 mt-12">
-            <div class="flex justify-center gap-6 mb-4 text-xs font-medium text-gray-500">
-                <button onclick="switchTab('overview')" class="hover:text-black transition cursor-pointer">Home</button>
-                <button onclick="switchTab('publications')" class="hover:text-black transition cursor-pointer">Publications</button>
-                <button onclick="switchTab('connect')" class="hover:text-black transition cursor-pointer">Contact</button>
-            </div>
-            <p class="text-xs text-gray-400 font-medium">&copy; 2026 Mourad Karami. All Rights Reserved.</p>
-            <p class="text-[10px] text-gray-300 mt-2 max-w-md mx-auto">
-                Medical Student. Content for educational purposes only. Not a licensed physician in your jurisdiction.
-                <span class="opacity-70 block mt-1">Referenced across public media and academic platforms.</span>
+          <div class="mt-4">
+            <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Doc.karami</p>
+            <p class="text-sm text-slate-600">
+              Moroccan medical student in Iași, Romania, using social media to explain medicine and combat misinformation.
             </p>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about" class="border-t border-slate-200 bg-slate-50/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="max-w-3xl">
+
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
+        About
+      </h2>
+
+      <p class="text-slate-700 mb-4">
+        Mourad Karami is a Moroccan medical student at the
+        <span class="font-semibold">Grigore T. Popa University of Medicine and Pharmacy</span> in Iași, Romania,
+        enrolled in the <span class="font-semibold">Faculty of Medicine (French section)</span>.
+      </p>
+
+      <p class="text-slate-700 mb-4">
+        Under the name <span class="font-semibold text-primary">Doc.karami</span>, he creates educational medical content on social media,
+        focusing on clear, evidence‑based explanations of health topics. His work aims to counter medical misinformation and help young
+        audiences understand how the body works, how diseases develop, and why scientific evidence matters.
+      </p>
+
+      <p class="text-slate-700 mb-4">
+        He reaches more than <span class="font-semibold">140,000 followers on Instagram</span> and
+        <span class="font-semibold">15,000 followers on TikTok</span>, along with educational videos on YouTube.
+      </p>
+
+      <p class="text-slate-700">
+        His content is grounded in current medical literature and clinical reasoning, but always translated into simple language,
+        visual explanations, and practical examples that non‑specialists can understand.
+      </p>
+
+    </div>
+  </div>
+</section>
+<!-- MISSION -->
+<section id="mission" class="border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- Mission Text -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
+          Mission
+        </h2>
+
+        <p class="text-slate-700 mb-4">
+          Mourad’s mission is to build a healthier, better‑informed society by making medical knowledge understandable and trustworthy.
+          In an online environment full of misleading claims and viral myths, he focuses on responsible, evidence‑based communication.
+        </p>
+
+        <p class="text-slate-700 mb-4">
+          Every video, post, and explanation is designed to empower people to ask better questions, recognize unreliable sources,
+          and make informed decisions about their health.
+        </p>
+      </div>
+
+      <!-- Mission Focus Areas -->
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+        <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wide mb-4">
+          Core focus areas
+        </h3>
+
+        <ul class="space-y-3 text-sm text-slate-700">
+          <li>• Fighting medical misinformation with clear, referenced explanations.</li>
+          <li>• Making medical knowledge accessible through simple language and visuals.</li>
+          <li>• Explaining scientific topics without losing accuracy.</li>
+          <li>• Encouraging critical thinking about health information online.</li>
+        </ul>
+      </div>
 
     </div>
 
-    <script>
-        function switchTab(tabId) {
-            // Remove active class from all sections
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            // Remove active class from all buttons
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            
-            // Activate selected section
-            const selectedSection = document.getElementById('view-' + tabId);
-            if (selectedSection) {
-                setTimeout(() => selectedSection.classList.add('active'), 10);
-            }
-            
-            // Activate selected button
-            const selectedBtn = document.getElementById('btn-' + tabId);
-            if (selectedBtn) {
-                selectedBtn.classList.add('active');
-            }
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+  </div>
+</section>
+<!-- PRESS & MEDIA -->
+<section id="press" class="border-t border-slate-200 bg-slate-50/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
 
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">
+          Press & Media
+        </h2>
+        <p class="text-slate-700 text-sm sm:text-base">
+          As featured in: Morocco World News, Hespress, Epinews, Radio România Iași, Evenimentul, BZI, MedicalManager,
+          Viața Medicală, UMF Iași Official News, Kech24, Marrakech7, Fluxpress.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Morocco World News -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Morocco World News</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Feature on Mourad’s mission to use social media to fight health misinformation.
+          </p>
+        </div>
+        <a href="https://www.moroccoworldnews.com/2026/01/276699/doc-karami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation/"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Hespress FR -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Hespress FR</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Article on medical misinformation during Ramadan and its impact on young people.
+          </p>
+        </div>
+        <a href="https://fr.hespress.com/462875-ramadan-quand-la-desinformation-medicale-sur-les-rs-met-la-sante-des-jeuneurs-en-danger.html"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Epinews -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Epinews</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Coverage of his work as a medical student using social media to fight health misinformation.
+          </p>
+        </div>
+        <a href="https://epinews.emphnet.net/en/news/most-popular/dockarami-a-moroccan-medical-students-mission-to-use-social-media-to-fight-health-misinformation"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Radio România Iași -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Radio România Iași</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Radio segment about how he uses social media to combat medical misinformation.
+          </p>
+        </div>
+        <a href="https://www.radioiasi.ro/staisigurpenet/audio-influencer-si-student-umf-iasi-mourad-karami-foloseste-retelele-sociale-pentru-a-combate-dezinformarea-medicala/"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Listen / read
+        </a>
+      </article>
+
+      <!-- Evenimentul (2 articles) -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Evenimentul</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Articles on his role in organizing the medical information space and explaining medicine on TikTok.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <a href="https://www.ziarulevenimentul.ro/stiri/moldova/de-la-ia-i-un-student-marocan-face-ordine-in-haosul-informational-medical--217594821.html"
+             target="_blank"
+             class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+            Article 1
+          </a>
+          <a href="https://www.ziarulevenimentul.ro/stiri/moldova/medicina-explicata-pe-tiktok-de-catre-un-student-din-maroc--217594812.html"
+             target="_blank"
+             class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+            Article 2
+          </a>
+        </div>
+      </article>
+
+      <!-- BZI -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">BZI</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Coverage of his online impact and fight against medical misinformation for over 150,000 followers.
+          </p>
+        </div>
+        <a href="https://www.bzi.ro/student-la-medicina-din-iasi-urmarit-de-peste-150-000-de-oameni-online-lupta-cu-dezinformarea-medicala-de-pe-internet-5486385"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- MedicalManager -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">MedicalManager</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Story on his transition from lecture hall to online platforms to combat misinformation.
+          </p>
+        </div>
+        <a href="https://www.medicalmanager.ro/din-amfiteatru-in-online-un-student-international-la-umf-iasi-combate-dezinformarea-medicala/"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Viața Medicală -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Viața Medicală</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Article on his role as an international student doing medical education online.
+          </p>
+        </div>
+        <a href="https://www.viata-medicala.ro/un-student-international-de-la-umf-iasi-face-educatie-medicala-in-mediul-online-44673"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- UMF Iași Official News -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">UMF Iași Official News</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Official university coverage of his work in combating medical misinformation.
+          </p>
+        </div>
+        <a href="https://news.umfiasi.ro/din-amfiteatru-in-online-un-student-international-la-umf-iasi-combate-dezinformarea-medicala/"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Kech24 -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Kech24</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Interview about his journey as a content creator and medical student from Marrakech.
+          </p>
+        </div>
+        <a href="https://kech24.com/صانع-المحتوى-مراد-كرمي-لـكشـ24-تناسل-الأسئلة-وراء-فكرة-تصوير-نصائحي-الطبية-ڤيديو.html"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Marrakech7 -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Marrakech7</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Moroccan coverage of his educational work and online presence.
+          </p>
+        </div>
+        <a href="https://marrakech7.com/457-3/"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+      <!-- Fluxpress -->
+      <article class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 mb-1">Fluxpress</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            Article on a Marrakech-born medical student combining medical studies and social media education.
+          </p>
+        </div>
+        <a href="https://fluxpress.net/international/كرمي-مراد-ابن-مراكش-طالب-بكلية-الطب-يجم/"
+           target="_blank"
+           class="inline-flex items-center px-3 py-2 rounded-full text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white">
+          Read article
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- PUBLICATIONS -->
+<section id="publications" class="border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- Left Column: Book Info -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">
+          Publications
+        </h2>
+
+        <p class="text-slate-700 text-sm sm:text-base mb-4">
+          Beyond short‑form content, Mourad also contributes to structured educational resources.
+        </p>
+
+        <div class="mt-4 bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-2">
+            Educational publication
+          </p>
+
+          <h3 class="text-lg font-semibold text-slate-900 mb-1">
+            Metabolic Architecture
+          </h3>
+
+          <p class="text-sm text-slate-600 mb-3">
+            <span class="font-semibold">Author:</span> Mourad Karami<br />
+            <span class="font-semibold">Publisher:</span> Zenodo<br />
+            <span class="font-semibold">DOI:</span>
+            <a href="https://doi.org/10.5281/zenodo.18308134"
+               target="_blank"
+               class="text-primary hover:underline">
+              10.5281/zenodo.18308134
+            </a><br />
+            <span class="font-semibold">Published:</span> 2025
+          </p>
+
+          <p class="text-sm text-slate-700 mb-4">
+            <span class="font-semibold">Metabolic Architecture</span> is an educational publication that explores the structure and logic of metabolic pathways,
+            connecting biochemical mechanisms with their clinical relevance. It breaks down complex metabolic networks into intuitive diagrams and explanations.
+          </p>
+
+          <a href="https://zenodo.org/records/18308134"
+             target="_blank"
+             class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primaryLight">
+            View on Zenodo
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Why It Matters -->
+      <div class="lg:pl-8">
+        <div class="bg-accent/60 border border-primary/10 rounded-2xl p-6">
+          <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wide mb-3">
+            Why it matters
+          </h3>
+
+          <ul class="space-y-3 text-sm text-slate-700">
+            <li>• Bridges basic biochemistry with clinical understanding of metabolic diseases.</li>
+            <li>• Uses clear visuals and structured explanations for self‑directed learning.</li>
+            <li>• Open‑access resource contributing to global medical education.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- EDUCATION -->
+<section id="education" class="border-t border-slate-200 bg-slate-50/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <div class="max-w-3xl">
+
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
+        Education
+      </h2>
+
+      <p class="text-slate-700 mb-4">
+        Mourad Karami is currently a medical student at the
+        <span class="font-semibold">Grigore T. Popa University of Medicine and Pharmacy</span> in Iași, Romania —
+        one of Eastern Europe’s most respected medical institutions.
+      </p>
+
+      <p class="text-slate-700 mb-4">
+        He is enrolled in the <span class="font-semibold">Faculty of Medicine (French section)</span>, where he studies
+        fundamental and clinical sciences including anatomy, physiology, biochemistry, pathology, and internal medicine.
+      </p>
+
+      <p class="text-slate-700 mb-4">
+        His academic background strongly influences his educational content, ensuring that every explanation is grounded in
+        scientific accuracy and aligned with modern medical curricula.
+      </p>
+
+      <div class="mt-6 bg-white border border-slate-200 rounded-2xl p-6">
+        <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wide mb-3">
+          Academic Institution
+        </h3>
+
+        <p class="text-sm text-slate-700 mb-1">
+          <span class="font-semibold">University:</span> Grigore T. Popa University of Medicine and Pharmacy
+        </p>
+
+        <p class="text-sm text-slate-700 mb-1">
+          <span class="font-semibold">Faculty:</span> Medicine (French section)
+        </p>
+
+        <p class="text-sm text-slate-700 mb-1">
+          <span class="font-semibold">Location:</span> Iași, Romania
+        </p>
+
+        <p class="text-sm text-slate-700">
+          <span class="font-semibold">Focus:</span> Evidence‑based medical education, clinical reasoning, and public health communication.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ACADEMIC PROFILES -->
+<section id="academic-profiles" class="border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <div class="max-w-3xl mb-8">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
+        Academic Profiles
+      </h2>
+
+      <p class="text-slate-700">
+        Mourad maintains several academic and research‑related profiles to ensure transparency, credibility,
+        and accessibility of his educational work. These platforms host identifiers such as
+        <span class="font-semibold">ORCID</span> and <span class="font-semibold">DOI</span>, which are also included in the structured data of this website.
+      </p>
+    </div>
+
+    <!-- Profiles Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- ORCID -->
+      <a href="https://orcid.org/0009-0006-0365-7616"
+         target="_blank"
+         class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">ORCID</h3>
+        <p class="text-sm text-slate-600 mb-3">0009‑0006‑0365‑7616</p>
+        <span class="text-primary text-xs font-semibold">View Profile →</span>
+      </a>
+
+      <!-- ResearchGate -->
+      <a href="https://www.researchgate.net/profile/Mourad-Karami"
+         target="_blank"
+         class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">ResearchGate</h3>
+        <p class="text-sm text-slate-600 mb-3">Academic presence & contributions</p>
+        <span class="text-primary text-xs font-semibold">View Profile →</span>
+      </a>
+
+      <!-- SciProfiles -->
+      <a href="https://sciprofiles.com/profile/dockarami"
+         target="_blank"
+         class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">SciProfiles</h3>
+        <p class="text-sm text-slate-600 mb-3">Scientific identity & indexing</p>
+        <span class="text-primary text-xs font-semibold">View Profile →</span>
+      </a>
+
+      <!-- DOI (Zenodo) -->
+      <a href="https://doi.org/10.5281/zenodo.18308134"
+         target="_blank"
+         class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">DOI (Zenodo)</h3>
+        <p class="text-sm text-slate-600 mb-3">10.5281/zenodo.18308134</p>
+        <span class="text-primary text-xs font-semibold">View Publication →</span>
+      </a>
+
+      <!-- Wikidata -->
+      <a href="https://www.wikidata.org/wiki/Q138455559"
+         target="_blank"
+         class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">Wikidata</h3>
+        <p class="text-sm text-slate-600 mb-3">Knowledge Graph entity</p>
+        <span class="text-primary text-xs font-semibold">View Entry →</span>
+      </a>
+
+      <!-- WikiAlpha -->
+      <a href="https://wikialpha.co/wiki/Mourad_Karami"
+         target="_blank"
+         class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">WikiAlpha</h3>
+        <p class="text-sm text-slate-600 mb-3">Public profile & biography</p>
+        <span class="text-primary text-xs font-semibold">View Page →</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+<!-- SOCIAL MEDIA -->
+<section id="social" class="border-t border-slate-200 bg-slate-50/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <div class="max-w-3xl mb-8">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
+        Social Media
+      </h2>
+
+      <p class="text-slate-700">
+        Mourad shares educational medical content across multiple platforms, reaching hundreds of thousands of viewers.
+        His goal is to make science accessible, fight misinformation, and help young people understand their health better.
+      </p>
+    </div>
+
+    <!-- Social Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/doc.karami"
+         target="_blank"
+         class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">Instagram</h3>
+        <p class="text-sm text-slate-600 mb-3">140,000+ followers</p>
+        <span class="text-primary text-xs font-semibold">Visit Profile →</span>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@doc.karami"
+         target="_blank"
+         class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">TikTok</h3>
+        <p class="text-sm text-slate-600 mb-3">15,000+ followers</p>
+        <span class="text-primary text-xs font-semibold">Visit Profile →</span>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@doc.karami"
+         target="_blank"
+         class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">YouTube</h3>
+        <p class="text-sm text-slate-600 mb-3">Educational videos & explanations</p>
+        <span class="text-primary text-xs font-semibold">Visit Channel →</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/dockarami"
+         target="_blank"
+         class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-primary hover:bg-accent transition">
+        <h3 class="text-sm font-semibold text-slate-900 mb-1">LinkedIn</h3>
+        <p class="text-sm text-slate-600 mb-3">Professional & academic profile</p>
+        <span class="text-primary text-xs font-semibold">Visit Profile →</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <div class="max-w-3xl mb-8">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
+        Contact
+      </h2>
+
+      <p class="text-slate-700">
+        For professional inquiries, collaborations, interviews, or academic communication, you can reach Mourad directly via email.
+        Responses are prioritized for media, academic, and educational requests.
+      </p>
+    </div>
+
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 max-w-xl">
+      <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wide mb-3">
+        Email
+      </h3>
+
+      <a href="mailto:contact@mouradkarami.com"
+         class="text-primary font-semibold text-sm hover:underline">
+        contact@mouradkarami.com
+      </a>
+
+      <p class="text-xs text-slate-500 mt-3">
+        Please allow time for a response. Messages related to medical emergencies will not be answered.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="border-t border-slate-200 bg-slate-900 text-slate-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Top Row -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-8">
+
+      <!-- Logo / Name -->
+      <div class="flex items-center space-x-3">
+        <div class="h-9 w-9 rounded-full bg-primary flex items-center justify-center text-white font-semibold text-sm">
+          MK
+        </div>
+        <span class="text-base font-semibold text-white">Mourad Karami</span>
+      </div>
+
+      <!-- Footer Nav -->
+      <nav class="flex flex-wrap gap-4 text-sm">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#mission" class="hover:text-white">Mission</a>
+        <a href="#press" class="hover:text-white">Press</a>
+        <a href="#publications" class="hover:text-white">Publications</a>
+        <a href="#education" class="hover:text-white">Education</a>
+        <a href="#academic-profiles" class="hover:text-white">Academic Profiles</a>
+        <a href="#social" class="hover:text-white">Social Media</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-slate-700 my-6"></div>
+
+    <!-- Bottom Row -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-slate-400">
+
+      <p>
+        © <span id="year"></span> Mourad Karami — All rights reserved.
+      </p>
+
+      <div class="flex items-center gap-4">
+        <a href="mailto:contact@mouradkarami.com" class="hover:text-white">Email</a>
+        <a href="https://www.instagram.com/doc.karami" target="_blank" class="hover:text-white">Instagram</a>
+        <a href="https://www.tiktok.com/@doc.karami" target="_blank" class="hover:text-white">TikTok</a>
+        <a href="https://www.youtube.com/@doc.karami" target="_blank" class="hover:text-white">YouTube</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Auto Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
 </body>
 </html>
