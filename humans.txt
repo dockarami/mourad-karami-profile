@@ -1,0 +1,19 @@
+/* TEAM */
+Creator: Mourad Karami
+Role: Medical student, educator, content creator
+Website: https://www.mouradkarami.com
+Location: Iași, Romania
+
+/* SOCIAL */
+Instagram: https://www.instagram.com/doc.karami
+TikTok: https://www.tiktok.com/@doc.karami
+YouTube: https://www.youtube.com/@doc.karami
+LinkedIn: https://www.linkedin.com/in/dockarami
+
+/* TECHNOLOGY */
+Site: Custom-built single-page website
+Stack: HTML, Tailwind CSS
+Hosting: Custom domain
+
+/* THANK YOU */
+Thanks for visiting my website and supporting evidence-based medical education.
